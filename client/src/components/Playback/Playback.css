@@ -1,0 +1,67 @@
+.playback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9.375rem;
+  width: 12.5rem;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.playback-container {
+  width: 100%;
+}
+
+.track {
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.artist {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--foreground-secondary);
+  margin-bottom: 5rem;
+}
+
+.media-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 130px;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: -1rem;
+}
+
+.previous,
+.toggle-play,
+.next {
+  width: 2.125rem;
+  height: 2.125rem;
+  border: none;
+  align-items: center;
+  background-color: transparent;
+}
+
+.previous,
+.next {
+  color: var(--foreground-secondary);
+}
+
+.toggle-play {
+  color: var(--foreground);
+}
+
+.spinner {
+  color: var(--foreground-secondary);
+}

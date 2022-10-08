@@ -1,0 +1,43 @@
+.info {
+  color: var(--foreground-secondary);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  text-align: center;
+  height: 15rem;
+  width: 15rem;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sign-in {
+  margin-top: 1rem;
+  padding: 0rem 0.75rem;
+  font-size: 1rem;
+  height: 2.125rem;
+  color: var(--foreground);
+  border: 1px solid var(--accent-3);
+  background-color: var(--background);
+  border-radius: 1rem;
+}
+
+.sign-in:hover {
+  cursor: pointer;
+  background-color: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
+}
+
+.fa-spotify {
+  color: #1db954;
+}
+
+.microphone-access-required {
+  margin-bottom: 1rem;
+}

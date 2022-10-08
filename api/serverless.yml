@@ -1,0 +1,40 @@
+service: api
+frameworkVersion: "3"
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  deploymentMethod: direct
+  httpApi:
+    cors: true
+  environment:
+    CLIENT_ID: ${env:CLIENT_ID}
+    REDIRECT_URI: ${env:REDIRECT_URI}
+    CLIENT_SECRET: ${env:CLIENT_SECRET}
+
+functions:
+  login:
+    handler: handler.login
+    events:
+      - httpApi:
+          path: /api/login
+          method: get
+  redirect:
+    handler: handler.redirect
+    events:
+      - httpApi:
+          path: /api/redirect
+          method: get
+  refreshToken:
+    handler: handler.refreshToken
+    events:
+      - httpApi:
+          path: /api/refreshToken
+          method: get
+  logout:
+    handler: handler.logout
+    events:
+      - httpApi:
+          path: /api/logout
+          method: get

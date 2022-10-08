@@ -1,0 +1,76 @@
+.search-area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-container {
+  backdrop-filter: blur(3px);
+  flex-grow: 1;
+  margin-right: 1rem;
+  z-index: 1;
+  max-width: 25rem;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    padding: 0 0.5rem;
+    margin: auto;
+  }
+}
+
+.search-bar {
+  width: 100%;
+  font-size: 1rem;
+  height: 2.25rem;
+  padding: 0rem 0.75rem;
+  outline: none;
+  border: 1px solid var(--accent-3);
+  border-color: var(--accent-3) !important;
+  border-radius: 1rem;
+  color: var(--foreground);
+  background-color: transparent;
+}
+
+.search-bar.has-results {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-color: transparent !important;
+}
+
+.search-result {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s linear;
+  border-left: 1px solid transparent;
+  transition: all 0.2s linear;
+}
+
+.search-result:hover {
+  cursor: pointer;
+  border-left-color: var(--foreground);
+  background-color: var(--accent-2);
+}
+
+.result-track {
+  font-size: 1rem;
+}
+
+.result-artist {
+  color: var(--foreground-secondary);
+  font-size: 0.75rem;
+}
+
+.search-results {
+  padding-bottom: 1rem;
+  position: relative;
+  overflow-y: auto;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  max-height: 75vh;
+}
+
+.search-results.has-results {
+  border: 1px solid var(--accent-3);
+  border-top: none;
+}
