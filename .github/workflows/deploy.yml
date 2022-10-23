@@ -25,5 +25,5 @@ jobs:
         working-directory: client
         
       - name: Deploy app build to S3 bucket
-        run: aws s3 sync ./build/ s3://notish --delete
+        run: aws s3 sync ./build/ s3://deciball --delete
         working-directory: client
