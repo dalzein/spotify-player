@@ -21,7 +21,7 @@ function Nav(props) {
           <div className="nav-right">
             <p>{props.user}</p>
             <button className="sign-out" onClick={handleLogout}>
-              "Sign out"
+              Sign out
             </button>
           </div>
         )}
