@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Header from "../Header/Header";
-import Visualiser from "../Visualiser/Visualiser";
-import Media from "../Media/Media";
 import { getCookieValue, getToken } from "../../services/TokenService";
+import Header from "../Header/Header";
+import Media from "../Media/Media";
+import Visualiser from "../Visualiser/Visualiser";
 import "./App.css";
 
 function App() {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./Scrubber.css";
 
 function Scrubber(props) {
@@ -14,13 +14,15 @@ function Scrubber(props) {
   useEffect(() => {
     let timeout;
 
+    // Sync track's time position if scrubber isn't being manually dragged
     if (!isScrubbing) {
       timeout = setInterval(() => {
         props.player.getCurrentState().then(({ position, duration }) => {
-          setTrackTimeData({
+          setTrackTimeData((previousValue) => ({
+            ...previousValue,
             trackPosition: position,
             trackDuration: duration,
-          });
+          }));
         });
       }, 100);
     }
@@ -28,6 +30,7 @@ function Scrubber(props) {
     return () => clearInterval(timeout);
   }, [props.player, isScrubbing]);
 
+  // Work out the targeted track timestamp based the horizontal position of the mouse relative to the scrubber line
   const calculateNewTrackTimePosition = useCallback(
     (mouseX) => {
       const scrubberOffsetX = scrubberRef.current.getBoundingClientRect().x;
@@ -75,6 +78,7 @@ function Scrubber(props) {
       }
     }
 
+    // Update track position
     function handleMouseUp() {
       props.player.seek(trackPosition);
 

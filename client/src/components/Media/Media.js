@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Search from "../Search/Search";
-import Playback from "../Playback/Playback";
 import { getToken } from "../../services/TokenService";
+import Playback from "../Playback/Playback";
+import Search from "../Search/Search";
 import "./Media.css";
 
 function Media() {
