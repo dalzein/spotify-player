@@ -64,7 +64,6 @@ function Media() {
         });
 
         newPlayer.addListener("player_state_changed", (state) => {
-          console.log(state);
           if (state) {
             setTrackDetails({
               track: state.track_window.current_track.name,
