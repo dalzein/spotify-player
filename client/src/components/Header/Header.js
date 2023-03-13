@@ -14,7 +14,7 @@ function Nav(props) {
   return (
     <header>
       <div className="header-left">
-        <img src="/icon.svg" alt="icon"></img>
+        <img src="/android-chrome-192x192.png" alt="logo"></img>
       </div>
       {props.user !== "" && (
         <div className="header-right">
